@@ -1,0 +1,13 @@
+
+	This is an extension to the original STRIPS domain.
+The rooms have doors that can be open or closed, locked or unlocked.
+There are keys for the locks.
+
+	In this domains it is often the case that there are several 
+different ways of achieving the same goal.  Also, the problems in this
+domain can be made arbitrarily hard (or even unfeasible) depending on the
+start state.  One of the parameters that can be manipulated in the initial
+state is what keys does the robot have.
+         
+        This domain can be used in conjunction with the EBL module,
+ and it has been extensively tested.

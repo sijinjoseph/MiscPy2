@@ -1,0 +1,24 @@
+
+	Schedworld is a machine shop scheduling domain. There are several 
+machines in the shop, corresponding to several actions in the domain.  Each
+machine can operate an object at a time, only if the machine is IDLE and the
+object is FREE.  We would like to perform some of the above operations in an
+object. But there are some restrictions in the time at which we can use a
+machine. For example, ROLLing an object makes the object hot, and since some
+machines will not handle hot objects we would have to wait for some time to
+schedule a machine for a hot object. PRODIGY has to find an acceptable
+sequence of machines to perform the required operations in an object. 
+
+	Each operator corresponds to a machine, i.e. an operation to be 
+performed on the object. These are the following: POLISH, ROLL, LATHE, 
+GRIND, PUNCH, BOLT, WELD, SPRAY-PAINT and IMMERSION-PAINT. Some of these
+machines can CLAMP the object.
+
+
+	The interesting features of this domain are: 
+
+   - there is a lot of goal interactions.
+
+   - this is the only domain in Prodigy where time is involved.
+
+   - this domain has been extensively tested with the EBL module.

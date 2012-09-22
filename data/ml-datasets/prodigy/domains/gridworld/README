@@ -1,0 +1,45 @@
+
+	Gridworld is a three-dimensional version of the well known blocks 
+world.  The space is divided in grids or squares. The robot is of size
+1x1x1, so he always occupies only a single square.  There can be blocks of
+different size, and a robot is supposed to be able to move itself and the
+blocks around the place to achieve a particular configuration (specified in
+the final state). The robot (named RMG because he is a Robot, and a 
+Magician, and a Ghost, as you will find out later) can pickup blocks, 
+move them, and climb ontop of them.
+
+	We have described the gridworld domain using the operators PICK-UP,
+PUT-DOWN, and MOVE.  Following our specification, the robot can pick up with
+a block of any size if it is in a contiguous square and it is not holding
+anything else. When RMG is holding a block, the robot itself and the block
+occupy ONE square no matter the size of the block: just as if the block had
+disappeared. (Yes, we didn't tell you our robot is also a magician! This
+simplification  was introduced so that the full 3-D path planning problem
+could be avoided.)
+
+	Blocks in the domain must be rectangular, but they can be of 
+arbitrary size (e.g. 3x5x2). They maintain their initial spacial orientation
+in the world, since they cannot be rotated. The specification for locations
+is given by a vector of length six. The first three numbers indicate the
+square in the location that is closest to 0,0,0, (lower-left-corner) and the
+last three indicate the square that is farthest from 0,0,0
+(upper-right-corner).
+
+
+	RMG can move around (even when it is carrying a block) using the 
+operator MOVE. The robot is indeed a magician, but not a ghost so it is not
+allowed to move through squares occupied by blocks.  RMG can also put down a
+block he is holding if there is room for the block in the squares contiguous
+to RMG.
+
+	RMG can build stairs, archs...etc. While it may seem
+that RMG solves the problem in the hardest way possible, some
+experimentation with this domain will convince you how difficult it really
+is.  However, with the addition of control rules, the problem solving
+process can be made much more efficient.
+
+	This domain can be modified to have more than one robot in the world. 
+We found interesting problems to play with. For example, two robots
+can cooperate to solve a problem: one robot can support a location
+while the other one accomplishes the goal.
+

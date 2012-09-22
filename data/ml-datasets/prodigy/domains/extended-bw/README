@@ -1,0 +1,35 @@
+Extended Blocks World - rlj 4/88
+
+Objects
+-------
+ (object <name>)
+ (block <name>)
+ (pyramid <name>)
+ (weight <object> <amount>)
+ (location <object> <position>)
+ (vacant-loc <position>)
+ (adjacent-loc <pos1> <pos2>) function that tells if a location is 
+     adjacent or not
+ (weight <object> <amount>)
+
+Description
+-----------
+An extension of the standard blocks world domain.  The operators are:
+ + PICK-UP - standard except there is a weight limit on objects pick-up
+ + PUT-DOWN - standard
+ + STACK  - standard
+ + UNSTACK - standard except there is a weight limit for unstacking 
+ + PUSH-OBJECT - objects that are to heavy to be picked up can be pushed
+ + TOPPLE - the robot arm can push the top object off stacked blocks
+ + GLUE - two blocks can be made into one.  The new object has the combined
+      weight
+
+This domain is a test domain to get a feel for how prodigy works
+ + adds weight to blocks
+ + adds location to objects in a grid array on the table top
+ + has more control rules than the blocks world
+ 
+Operation
+---------
+*XDIM*, *YDIM* defines the x and y size of the table top
+

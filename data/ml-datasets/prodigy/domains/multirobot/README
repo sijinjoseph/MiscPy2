@@ -1,0 +1,37 @@
+The Multirobot domain.                                    January, 1989. 
+
+
+
+
+	This domain is based in the STRIPS domain. The main difference 
+with respect to it is that multiple agents can cooperate, i.e. there exist 
+two robots (it could be extended to more than two) that can perform the 
+different tasks alone or in a team. Now both robots  have the same 
+capabilities, so when the task can be performed by just one robot, any 
+is chosen, although some of the control rules try to select the robot that 
+can solve the problem more efficiently (for example, the one that is closer 
+to the object that has to be moved).
+
+The tasks that can be performed by a team of robots are basically pushing 
+objects, putting blocks into boxes, and taking them out. A robot can do it 
+by itself if the weight of the object is less than a certain limit. If not, 
+both robots cooperate.
+
+Another additions  to the existing Strips domain have been the locking and 
+unlocking of doors using keys.
+
+Future extensions:
+
+-the robots could have different capabilities; the best robot should be 
+ chosen in that case
+
+-when the robots have to push objects through different rooms, the best 
+ path from the origen to the destination should be chosen.
+
+
+Note: the inference rule about the connect and connects predicates does 
+      not work properly in all the cases.
+
+This domain is unstable. New control rules will be probably added,
+and also the operators can change. If you have any suggestion or
+question, please send mail to aperez@cs.cmu.edu.

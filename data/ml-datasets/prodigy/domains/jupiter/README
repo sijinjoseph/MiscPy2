@@ -1,0 +1,91 @@
+
+
+Description of the domain.-
+
+
+    + The world this domain refers to is formed by a series of bodies
+      and the viscous environment in which they are placed. The objects
+      in Jupiter are spherical and allowed to move in two dimensions (for
+      the sake of simplicity  z coordinate's value is fixed to 0).
+
+      Given an initial description of the world, the goal will consist on
+      achieving another different configuration of its components.
+
+      There is a privileged object -- called Prodigy -- and this is the
+      only one capable of propelling itself. The rest of them may change 
+      their location coordinates just in case any other body collides with
+      them, i.e. they are not "autonomous". Therefore, the actions descri-
+      bed by the operators in the domain.lisp file (MOVE and BUMP-OBJECT) 
+      refer to Prodigy, and the application of any of them will make the
+      whole world to evolve according to the laws of classical mechanics.
+      
+      We assume that there is no rotational motion and the collisions are
+      "head-on", i.e. central.
+
+      The values of the parameters defining the objects may be chosen by 
+      the user -- radius, mass, modulus of elasticity, coefficient of res-
+      titution --, as well as those that refer to the environment -- linear
+      viscosity --. The application time of the forces acting upon Prodigy
+      may be changed, too. The magnitude of these forces will be calculated 
+      by the problem solver according to the values given to the rest of the
+      parameters. Forces' components and duration will be the only data
+      transferred from the problem solver to WM.
+
+      There exist some data that, although physically meaningless, must be 
+      provided in the description of the world. These are the values of the
+      time step and number of updates per cycle that the World Modeler is
+      going to use in the simulation of Prodigy's plans. This is needed be-
+      cause the WM Master does not always handle the force application time
+      it theoretically should. Some day this bug will be fixed, and Jupiter's
+      descriptions will therefore be simplified.
+
+      No relativistic or quantum dynamics is considered.
+      
+
+
+Comments on the Jupiter domain .-
+
+
+    + Only two operators (and no inference rules) are used. There are 
+      four control rules which can be substituted by appropiate infe-
+      rence rules (this was the case in the first version).
+      The current scheme has been chosen in order to :
+
+           - make explicit use of the control mechanism Prodigy handles
+	   - have a domain in which "select-bindings" rules are used
+
+    + The last precondition in both operators calculates the force Prodi-
+      gy must apply to itself and binds two variables to its components
+      (two dimensional movement). In BUMP-OBJECT, Prodigy's final position
+      is calculated and bound, too.
+
+    + Control rules are necessary to handle those cases in which some ob-
+      ject(-s) in the world block the path Prodigy would follow if the o-
+      perators were directly applied (obviously, no straight movement should
+      be done in such cases. Control rules help avoiding the obstacles).
+
+    + If we want Prodigy's plans to make sense, it must be given enough 
+      knowledge to "know" the mechanics of the world simulated by the World 
+      Modeler (functions.lisp).
+
+      The preconditions in both operators are needed in order to provide 
+      the planner with a realistic knowledge of the environment -- we
+      suppose Prodigy is not prepared to experiment and discover these 
+      data and physical laws by itself yet --.
+ 
+      The day Prodigy is capable of learning about the environment by it-
+      self, it will be able to start a plan with less (or no) knowledge
+      about physics and/or the structure of the world.
+
+   
+
+Contributions .-
+  
+
+    * Application in a "real" domain, in the sense that the data used 
+      in the plans Prodigy makes must be complete and coherent with the 
+      physical environment.
+
+    * Plans are not only made, but executed as well. After each step
+      Prodigy must get feedback -- first domain in which Prodigy co-
+      mmunicates with another program --. This part not available here.

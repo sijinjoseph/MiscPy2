@@ -1,0 +1,10 @@
+Index of probs
+
+18 Mar 1996      371 Index
+30 Jan 1989      601 p1-not-aligned.lisp
+30 Jan 1989      634 p2-not-aligned-vert.lisp
+30 Jan 1989      670 p3-conv-aligned-overlap.lisp
+30 Jan 1989      766 p4-conv-aligned-too-near.lisp
+30 Jan 1989      717 p5-conv-aligned-OK.lisp
+30 Jan 1989      683 p6-aligned-but-not-conv.lisp
+30 Jan 1989      561 p7-like-p6-but-XPO.lisp

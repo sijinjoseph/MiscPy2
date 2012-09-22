@@ -1,0 +1,46 @@
+;; R1 domain                                      (Wed 27 Apr 1988)
+;;
+;;
+;; This domain is a model of the VAX UNIBUS configuration task performed by 
+;; John McDermott's R1 program.  The task involves placing a set of 
+;; peripheral device boards (modules) into backplanes (slots holding boards)
+;; and then placing the backplanes inside boxes.  Placing boards in backplanes
+;; is constrained by power, space, pinning type, and UNIBUS load.  Placing 
+;; backplanes in boxes is constrained by power, UNIBUS length, space, and 
+;; cabling.
+;;
+;; Features:
+;;
+;; 	o  DSPF: The define static predicate functions facility was
+;; 	   created for this domain.  It increases the speed prodigy
+;;	   by  about 37%.  Be sure to toggle this flag before loading
+;; 	   a problem. 
+;;
+;;      o  This domain is a prodigy version of the R1-Soar
+;;	   domain.  As such, it resembles the R1-Soar configuration 
+;; 	   task, but whereas Soar performs the task linearly--specifying
+;;	   what the next item to configure will be--Prodigy can select
+;; 	   items at random.
+;;
+;;
+;;	o  Objects: backplane (bp) -- a physical object with slots to hold
+;;				      circuit boards, there are 4 varieties
+;;    	            		      of modules.
+;;
+;;     	            module  (mod)  -- a collection of circuit boards, there
+;;				      are currently 7 kinds of modules.
+;;    	            
+;;    	            boards         -- a circuit board.
+;;    	            
+;;    	            cable	   -- a power cable connecting backplanes,
+;; 				      these are needed to provide sufficient
+;;				      electricity to the boards when they are
+;;				      inside the backplanes, there are 2 kinds
+;;				      of cables. 
+;;					
+;;		    box            -- the container for backplane-board 
+;; 				      configurations. there is only one type
+;;				      of box (a standard box). 
+
+
+;;				 	 

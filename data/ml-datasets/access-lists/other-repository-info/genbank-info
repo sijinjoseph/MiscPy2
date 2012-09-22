@@ -1,0 +1,34 @@
+
+03/23/90
+
+"db" anonymous FTP directory:
+
+alu	     Jurek Jurka's Alu sequence and alignment database
+embl-newdata Weekly batches of EMBL updates since release 20
+gb-newdata   Weekly batches of GenBank updates since release 63
+gb-rel63     GenBank release 63.0
+gp-newdata   Weekly batches of GenPept updates since release 63
+gp-rel63     GenPept release 63.0
+seqanalref   Amos Bairoch's listing of sequence analysis literature refs
+
+Notes: Weekly update files are available as standard ASCII files or
+       as compressed ASCII files.  The compressed files are about
+       one-third the size of the standard files.  They can be
+       distinguished by the .Z suffix and can be uncompressed after
+       transfer with the standard Unix uncompress utility.
+
+       In addition to the weekly (incremental) update files, the
+       newdata directories each contain a file which represents the
+       cumulative contents of the (GenBank, GenPept, or EMBL) new data
+       since the last (quarterly) public release, pruned of duplicate
+       entries.  A given weekly update file will not contain duplicate
+       instances of an entry, but a given entry may appear (with 
+       changed status) in more than one of the weekly update files.
+       Within a cumulative update file (gbseq.all, gpseq.all, or
+       emseq.all) there should be no duplicate entries.  The cumulative
+       update files are updated daily and are available in compressed
+       form only.
+
+       The current GenBank release files (in gb-rel63) and
+       GenPept release files (in gp-rel63) are provided
+       in compressed form only.

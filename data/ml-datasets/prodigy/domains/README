@@ -1,0 +1,46 @@
+
+	Here is a summary of the domains that can be used currently with
+Prodigy.  Each one is described briefly. For more information in any of
+them, read the README file in the directory corresponding to the domain.
+
+  * stripsworld: There are several directories related to this domain:
+
+       - stripsworld: the domain for STRIPS.
+
+       - extended-strips: an extension to the STRIPS domain where doors 
+                          can be locked and there are keys for the locks.
+
+       - multirobot: the STRIPS domain with two or more robots.
+
+
+  * blocksworld: There are several directories related to this domain:
+
+       - blocksworld: the domain as was built initially.
+
+       - frozenblocksworld: a stable version. Used for the manual.
+
+       - extended-bw: an extension to blocksworld that deals with  the weight 
+	         and location of the blocks.
+
+     (See also gridworld)
+
+  * eightpuzzle: a domain for solving the eight puzzle.
+
+  * grammar: a simple grammar.
+
+  * gridworld: a 3-D version of blocksworld.
+
+  * jupiter: Prodigy interacts with an external world, via the World Modelers.
+
+  * logic: a simple logic domain.
+
+  * matrix-algebra: gaussian elimination in matrices.
+
+  * r1: VAX configuration domain (a simplification of R1).
+
+  * rocket: chinese rocket domain.
+
+  * schedworld:  a machine shop scheduling domain.
+
+  * telescope: a domain for building telescope mirrors.
+

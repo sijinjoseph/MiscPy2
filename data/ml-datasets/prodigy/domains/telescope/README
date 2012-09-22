@@ -1,0 +1,72 @@
+@make(article)
+@style(fontfamily "TimesRoman")
+
+
+@heading("Domain: Constructing telescope mirrors")
+
+@center[(jgc & yg)]
+
+@section(Description)
+
+The operators in the domain describe how to make a primary telescope mirror.
+
+Objects: 
+
+@begin(itemize)
+
+Pieces of wood and glass. 
+
+They can be planaror concave, clean or dirty.
+
+@end(itemize)
+
+Actions:
+
+@begin(itemize)
+
+To clean a solid surface with distilled water.
+
+To grind a surface with a certain shape with the grinding equipment.
+
+To aluminize a surface (by depositing vaporized aluminum on the surface in a 
+vacuum chamber).
+
+To polish the surface and make it smooth.
+
+@end(itemize)
+
+
+Rules:
+
+@begin(itemize)
+A mirror is a polished and aluminized surface of glass.
+
+A primary telescope mirror is a mirror with a concave shape.
+
+@end(itemize)
+
+@section(About the Domain)
+
+
+@begin(itemize)
+
+The domain was designed to build and test the learning by 
+experimentation module.
+
+@begin(multiple)
+Two versions of the domain:
+
+1) The domain completely described. The operators are written in full, 
+with all the preconditions and postconditions.
+
+2) The incomplete domain: the operators are missing preconditions and/or 
+postconditions. Control rules are needed.
+
+@end(multiple)
+
+The actions are irreversible. Unlike other domains (for example blocksworld),
+there is no operator that does the reverse action of a given one.
+
+@end(itemize)
+
+

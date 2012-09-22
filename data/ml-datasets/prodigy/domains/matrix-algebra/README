@@ -1,0 +1,48 @@
+\documentstyle[fullpage,12pt]{article}
+
+\begin{document}
+
+\begin{center}
+{\bf\large PRODIGY domain - ALGEBRAWORLD\\
+January 29, 1989}
+\end{center}
+
+\begin{itemize}
+
+\item The final purpose of this domain is to define a large set of 
+matrix operations for solving simple linear algebra problems within PRODIGY.
+
+\item This domain is being used for studying the process of learning
+how to solve a new problem by derivational analogy with previously solved 
+problems.
+
+\item The initial state is always a matrix. The goal statement specifies
+desired final configurations of the matrix. The generated plan enumerates 
+the operations to apply to the initial matrix that lead into the goal
+matrix.
+
+\item The current status of the domain allow simple operations as 
+scaling a matrix, multiplying a row by a constant, etc. With the actual
+domain, PRODIGY is able to compute an upper triangular matrix from
+an initial matrix representing a linear system of equations.
+
+\item The design of this domain involved dealing with the following issues:
+
+\begin{itemize}
+\item Identifying and separating the operations on matrices
+from their algorithmic sequencing in linear algebra procedures.
+
+\item Exploring the use of the universal quantifier in specifying
+the preconditions of the operators. In particular we focused on the
+need for having ``generator'' predicates, the problems with updating
+the values of the arguments of a predicate used in a ``forall'' statement
+in subgoaling, and the previous issues within embebbed ``forall''
+predicates.
+\end{itemize}
+
+\item Finally this domain is also being used as a test domain 
+for interleaving goals in the search tree.
+
+\end{itemize}
+\end{document}
+

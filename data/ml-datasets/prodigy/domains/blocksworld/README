@@ -1,0 +1,20 @@
+
+
+	In the blocksworld domain an arm picks blocks and stacks them.
+The arm can only hold one block.
+
+	This is a very simple domain. There is no functions file.
+This domain has been extensively tested with the EBL subsystem.
+
+	There are several directories related to this domain:
+
+  - blocksworld: the domain as was built initially.
+
+  - frozenblocksworld: a stable version. Used for the manual.
+
+  - extended-bw: an extension to blocksworld that deals with  the weight 
+	         and location of the blocks.
+
+
+
+	The domain gridworld is a version of blocksworld in 3-D

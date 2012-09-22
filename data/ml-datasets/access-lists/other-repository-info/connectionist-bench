@@ -1,0 +1,8 @@
+As I come across other repositories, I'll try to include information on
+them here along with occasional summary information in this directory.
+
+#  Name                 Host            Directory
+=  ==================== =============== ===============================
+1. UCI ML repository    ics.uci.edu     ~pub/machine-learning-databases
+2. connectionist-bench  pt.cs.cmu.edu   /afs/cs/project/connect/bench
+3. genbank              genbank.bio.net ~pub/db/gb-rel64 

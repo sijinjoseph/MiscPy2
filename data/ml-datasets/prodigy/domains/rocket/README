@@ -1,0 +1,20 @@
+\documentstyle[fullpage,12pt]{article}
+
+\begin{document}
+
+\begin{center}
+{\bf\large PRODIGY domain - CHINESEROCKET\\
+January 29, 1989}
+\end{center}
+
+\begin{itemize}
+
+\item This domain is being used to develop nonlinear behavior within 
+PRODIGY. 
+
+\item There are two operators {\bf MOVE-ROCKET-FAST} and {\bf MOVE-ROCKET-SLOW}
+to study the case of having alternate operators to apply.
+
+\end{itemize}
+\end{document}
+
